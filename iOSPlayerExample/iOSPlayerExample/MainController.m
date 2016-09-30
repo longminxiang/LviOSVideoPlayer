@@ -84,6 +84,21 @@
     [self playWithURL:url];
 }
 
+- (UITableViewCellEditingStyle)tableView:(UITableView *)tableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return UITableViewCellEditingStyleDelete;
+}
+
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *docDir = [paths objectAtIndex:0];
+    NSString *filePath = [NSString stringWithFormat:@"%@/%@", docDir, self.elements[indexPath.row]];
+    NSURL *url = [NSURL fileURLWithPath:filePath isDirectory:NO];
+    [[NSFileManager defaultManager] removeItemAtURL:url error:nil];
+    [self reloadElements];
+}
+
 - (void)playWithURL:(NSURL *)url
 {
     VitamioVPVC *vc = [[VitamioVPVC alloc] initWithThemeStyle:VideoPlayerGreenButtonTheme controlBarMode:VideoPlayerControlBarWithoutPreviousAndNextOperate];
