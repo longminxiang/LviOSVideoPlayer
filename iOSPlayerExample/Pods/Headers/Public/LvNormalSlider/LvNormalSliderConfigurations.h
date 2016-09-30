@@ -1,0 +1,1 @@
+../../../LvNormalSlider/Pod/Classes/LvNormalSliderConfigurations.h

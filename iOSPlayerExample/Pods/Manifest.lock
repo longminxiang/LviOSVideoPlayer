@@ -1,0 +1,27 @@
+PODS:
+  - DFVideoPlayer/Vitamio (0.1.2)
+  - LvModelWindow (0.1.4)
+  - LvNormalSlider (0.1.0)
+
+DEPENDENCIES:
+  - DFVideoPlayer/Vitamio (= 0.1.2)
+  - LvModelWindow (~> 0.1.1)
+  - LvNormalSlider (from `https://github.com/pgbo/LvNormalSlider.git`)
+
+EXTERNAL SOURCES:
+  LvNormalSlider:
+    :git: https://github.com/pgbo/LvNormalSlider.git
+
+CHECKOUT OPTIONS:
+  LvNormalSlider:
+    :commit: 75c4338255a12d7616b78904089991b247620e18
+    :git: https://github.com/pgbo/LvNormalSlider.git
+
+SPEC CHECKSUMS:
+  DFVideoPlayer: b7a98bc1e508176a6638529af9779c3ef60a0ac8
+  LvModelWindow: 8e16cd1a23ecb45d23bfe67b5f8980bf45114086
+  LvNormalSlider: 9e49ba98223c5f6edcfafd68ea16b940a91cf28f
+
+PODFILE CHECKSUM: 3b729654c29501b631026b0449a438f36c513211
+
+COCOAPODS: 1.0.1
